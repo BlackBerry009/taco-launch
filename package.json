@@ -1,6 +1,6 @@
 {
-  "name": "m",
-  "version": "0.0.1",
+  "name": "create-boilerplate-cli",
+  "version": "1.0.0",
   "description": "init project",
   "main": "index.js",
   "bin": {
@@ -12,8 +12,11 @@
     "release:minor": "standard-version --release-as minor",
     "release:patch": "standard-version --release-as patch"
   },
-  "author": "",
+  "author": "m",
   "license": "ISC",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^9.4.0",
