@@ -1,6 +1,6 @@
 {
   "name": "m",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "init project",
   "main": "index.js",
   "bin": {
