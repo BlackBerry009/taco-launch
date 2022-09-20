@@ -21,9 +21,10 @@
     "chalk": "^4.1.2",
     "commander": "^9.4.0",
     "download-git-repo": "^3.0.2",
+    "fs-extra": "^10.1.0",
     "inquirer": "^8.1.2",
     "log-symbols": "^4.1.0",
-    "ora": "^6.1.2"
+    "ora": "^5.4.1"
   },
   "devDependencies": {
     "git-cz": "^4.9.0",

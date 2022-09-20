@@ -2,6 +2,8 @@ const chalk = require('chalk');
 const downloadRepo = require('download-git-repo');
 const inquirer = require('inquirer');
 const symbols = require('log-symbols');
+const ora = require('ora')
+const fse = require('fs-extra');
 
 const REACT_REPO = 'BlackBerry009/boilerplate-project-react#main';
 
@@ -22,6 +24,14 @@ const prompt = inquirer.createPromptModule();
 prompt(questions).then((answers) => {
   const { type, name } = answers;
   if (type === 'React') {
+    if(fse.pathExistsSync(`./${name}`)) {
+      console.log(
+        chalk.red(symbols.error),
+        chalk.red('The project is already exist.')
+      )
+      return;
+    }
+    const spin = ora('downloading pls wait...').start();
     downloadRepo(`${REACT_REPO}`, `./${name}`, { clone: true }, (err) => {
       if (err) {
         console.log(
@@ -30,6 +40,7 @@ prompt(questions).then((answers) => {
         );
         return;
       }
+      spin.stop();
       console.log(
         chalk.green(symbols.success),
         chalk.green('Generation completed!'),
