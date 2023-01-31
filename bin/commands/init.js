@@ -47,6 +47,7 @@ prompt(questions).then((answers) => {
       );
       console.log('\n To get started');
       console.log(`\n    cd ${name} \n`);
+      console.log('\n yarn && yarn start')
     });
   } else if (type === 'Vue') {
     console.log(
