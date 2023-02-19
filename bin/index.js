@@ -1,2 +1,3 @@
 #!/usr/bin/env node
-require('./template.js')
+
+import '../dist/index.js';

@@ -2,11 +2,13 @@
   "name": "create-boilerplate-cli",
   "version": "1.0.2",
   "description": "init project",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "type": "module",
   "bin": {
     "m": "bin/index.js"
   },
   "scripts": {
+    "build": "rm -rf dist && tsup src --format esm",
     "commit": "git-cz",
     "release:major": "standard-version --release-as major",
     "release:minor": "standard-version --release-as minor",
@@ -18,16 +20,17 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "chalk": "^4.1.2",
-    "commander": "^9.4.0",
-    "download-git-repo": "^3.0.2",
-    "fs-extra": "^10.1.0",
-    "inquirer": "^8.1.2",
-    "log-symbols": "^4.1.0",
-    "ora": "^5.4.1"
+    "@clack/prompts": "^0.4.3",
+    "commander": "^10.0.0",
+    "fs-extra": "^11.1.0",
+    "log-symbols": "^5.1.0",
+    "picocolors": "^1.0.0",
+    "tsup": "^6.6.3"
   },
   "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
     "git-cz": "^4.9.0",
-    "standard-version": "^9.5.0"
+    "standard-version": "^9.5.0",
+    "typescript": "^4.9.5"
   }
 }
