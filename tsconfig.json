@@ -1,20 +1,16 @@
 {
+  "include": ["build.config.ts", "src", "__tests__"],
   "compilerOptions": {
-    "module": "ESNext",
-    "target": "ESNext",
-    "lib": ["DOM", "ESNext"],
-    "sourceMap": false,
-    "moduleResolution": "nodenext",
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "noFallthroughCasesInSwitch": true,
-    "declaration": true,
-    "emitDeclarationOnly": true,
+    "outDir": "dist",
+    "target": "ES2020",
+    "module": "ES2020",
+    "moduleResolution": "Node",
     "strict": true,
+    "skipLibCheck": true,
+    "declaration": false,
+    "sourceMap": false,
+    "noUnusedLocals": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "allowImportingTsExtensions": true
+    "resolveJsonModule": true
   }
 }
