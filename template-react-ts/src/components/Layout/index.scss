@@ -1,0 +1,17 @@
+.layout-app {
+  .sider {
+    height: 100vh;
+  }
+  .bg {
+    background: #fff;
+  }
+  .logo-area {
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      width: 64px;
+    }
+  }
+}
