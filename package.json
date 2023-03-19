@@ -1,6 +1,6 @@
 {
   "name": "taco-launch",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "init project",
   "main": "index.js",
   "type": "module",
