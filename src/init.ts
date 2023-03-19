@@ -23,10 +23,11 @@ export const main = async () => {
         }),
       framework: () =>
         p.select({
-          message: `Which framework do you want to use?`,
+          message: `Which feature do you want to use?`,
           options: [
             { value: 'react-ts', label: 'React' },
             { value: 'vue-ts', label: 'Vue' },
+            { value: 'lib', label: 'lib' },
           ],
         }),
     },
