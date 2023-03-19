@@ -1,16 +1,29 @@
 {
   "name": "create-boilerplate-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "init project",
   "main": "index.js",
+  "type": "module",
   "bin": {
-    "m": "bin/index.js"
+    "m": "index.js"
   },
+  "files": [
+    "index.js",
+    "template-*",
+    "dist"
+  ],
   "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
     "commit": "git-cz",
     "release:major": "standard-version --release-as major",
     "release:minor": "standard-version --release-as minor",
     "release:patch": "standard-version --release-as patch"
+  },
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
   },
   "author": "m",
   "license": "ISC",
@@ -18,16 +31,17 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "chalk": "^4.1.2",
-    "commander": "^9.4.0",
-    "download-git-repo": "^3.0.2",
-    "fs-extra": "^10.1.0",
-    "inquirer": "^8.1.2",
-    "log-symbols": "^4.1.0",
-    "ora": "^5.4.1"
+    "@clack/prompts": "^0.6.3",
+    "commander": "^10.0.0",
+    "fs-extra": "^11.1.0",
+    "log-symbols": "^5.1.0",
+    "picocolors": "^1.0.0"
   },
   "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@vitejs/plugin-react": "^3.1.0",
     "git-cz": "^4.9.0",
-    "standard-version": "^9.5.0"
+    "standard-version": "^9.5.0",
+    "unbuild": "^1.1.2"
   }
 }
