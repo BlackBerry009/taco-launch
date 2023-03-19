@@ -25,7 +25,13 @@
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
   },
-  "author": "m",
+  "homepage": "https://github.com/BlackBerry009/create-boilerplate-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlackBerry009/create-boilerplate-cli"
+  },
+  "bugs": "https://github.com/BlackBerry009/create-boilerplate-cli/issues",
+  "author": "BlackBerry",
   "license": "ISC",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
