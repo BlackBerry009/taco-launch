@@ -1,11 +1,11 @@
-# cli
+# Intro
 a cli to initialize project
 
 - [x] React-ts
-- [ ] lib
+- [ ] lib  
 - [ ] Vue3
 
-# intro 
+# Usage
 ```sh
 #usage
 npm i taco-launch -g
