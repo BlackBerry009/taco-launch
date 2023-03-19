@@ -7,9 +7,14 @@
   "bin": {
     "taco": "index.js"
   },
+  "keywords": [
+    "cli",
+    "template",
+    "boilerplate"
+  ],
   "files": [
     "index.js",
-    "template-*",
+    "template",
     "dist"
   ],
   "scripts": {

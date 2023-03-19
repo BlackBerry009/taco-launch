@@ -8,8 +8,8 @@ import { fileURLToPath } from 'node:url';
 const getDirName = (filename: string) => {
   const templateDir = path.resolve(
     fileURLToPath(import.meta.url),
-    '../..',
-    `template-${filename}`,
+    '../../templates',
+    `${filename}`,
   );
   return templateDir;
 };
@@ -60,16 +60,14 @@ export const main = async () => {
       }
       s.stop(`Creating project success!`);
       let nextSteps = `cd ${project.name} \n
-        pnpm install \n
-        pnpm start`;
+                pnpm install \n
+                pnpm start`;
 
       p.note(nextSteps, 'Next steps.');
 
       p.outro(
         `Problems? ${color.underline(
-          color.cyan(
-            'https://github.com/BlackBerry009/create-boilerplate-cli/issues',
-          ),
+          color.cyan('https://github.com/BlackBerry009/taco-launch'),
         )}`,
       );
     },
