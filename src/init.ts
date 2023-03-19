@@ -25,8 +25,8 @@ export const main = async () => {
         p.select({
           message: `Which framework do you want to use?`,
           options: [
-            { value: 'react', label: 'React' },
-            { value: 'vue', label: 'Vue' },
+            { value: 'react-ts', label: 'React' },
+            { value: 'vue-ts', label: 'Vue' },
           ],
         }),
     },
@@ -37,49 +37,41 @@ export const main = async () => {
       },
     },
   );
-  if (project.framework === 'react') {
-    if (fse.pathExistsSync(`${project.name}`)) {
-      console.log(
-        color.red(logSymbols.error),
-        color.red('The project is already exist.'),
-      );
-      return;
-    }
-    const s = p.spinner();
-    s.start('Creating project...');
-    const templateDir = getDirName('react-ts');
-    fse.cp(
-      templateDir,
-      `./${project.name}`,
-      {
-        recursive: true,
-      },
-      (err) => {
-        if (err) {
-          s.stop(`Creating project failed: ${err}`);
-          return;
-        }
-        s.stop(`Creating project success!`);
-        let nextSteps = `cd ${project.name} \n
+  if (fse.pathExistsSync(`${project.name}`)) {
+    console.log(
+      color.red(logSymbols.error),
+      color.red('The project is already exist.'),
+    );
+    return;
+  }
+  const s = p.spinner();
+  s.start('Creating project...');
+  const templateDir = getDirName(`${project.framework}`);
+  fse.cp(
+    templateDir,
+    `./${project.name}`,
+    {
+      recursive: true,
+    },
+    (err) => {
+      if (err) {
+        s.stop(`Creating project failed: ${err}`);
+        return;
+      }
+      s.stop(`Creating project success!`);
+      let nextSteps = `cd ${project.name} \n
         pnpm install \n
         pnpm start`;
 
-        p.note(nextSteps, 'Next steps.');
+      p.note(nextSteps, 'Next steps.');
 
-        p.outro(
-          `Problems? ${color.underline(
-            color.cyan(
-              'https://github.com/BlackBerry009/create-boilerplate-cli/issues',
-            ),
-          )}`,
-        );
-      },
-    );
-  }
-  if (project.framework === 'vue') {
-    console.log(
-      color.red(logSymbols.error),
-      color.red('not have vue boilerplate yet...'),
-    );
-  }
+      p.outro(
+        `Problems? ${color.underline(
+          color.cyan(
+            'https://github.com/BlackBerry009/create-boilerplate-cli/issues',
+          ),
+        )}`,
+      );
+    },
+  );
 };
