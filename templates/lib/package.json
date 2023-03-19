@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@types/node": "^18.7.18",
+    "typescript": "^4.8.3"
+  },
+  "devDependencies": {
+    "git-cz": "^4.9.0",
+    "rollup": "^2.79.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build",
+    "commit": "git-cz",
+    "release:major": "standard-version --release-as major",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch"
+  }
+}

@@ -2,7 +2,7 @@
 a cli to initialize project
 
 - [x] React-ts
-- [ ] lib  
+- [x] lib  
 - [ ] Vue3
 
 # Usage
