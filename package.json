@@ -1,11 +1,11 @@
 {
-  "name": "create-boilerplate-cli",
-  "version": "1.0.3",
+  "name": "taco-launch",
+  "version": "0.0.1",
   "description": "init project",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "m": "index.js"
+    "taco": "index.js"
   },
   "files": [
     "index.js",
@@ -25,12 +25,12 @@
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
   },
-  "homepage": "https://github.com/BlackBerry009/create-boilerplate-cli",
+  "homepage": "https://github.com/BlackBerry009/taco-launch",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BlackBerry009/create-boilerplate-cli"
+    "url": "git+https://github.com/BlackBerry009/taco-launch"
   },
-  "bugs": "https://github.com/BlackBerry009/create-boilerplate-cli/issues",
+  "bugs": "https://github.com/BlackBerry009/taco-launch/issues",
   "author": "BlackBerry",
   "license": "ISC",
   "publishConfig": {
@@ -45,7 +45,6 @@
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",
-    "@vitejs/plugin-react": "^3.1.0",
     "git-cz": "^4.9.0",
     "standard-version": "^9.5.0",
     "unbuild": "^1.1.2"

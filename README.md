@@ -4,9 +4,9 @@ a cli to initialize project
 # intro 
 ```sh
 #usage
-npm i create-boilerplate-cli -g
-m init
+npm i taco-launch -g
+taco init
 
 #or
-npx create-boilerplate-cli
+npx taco-launch
 ```
