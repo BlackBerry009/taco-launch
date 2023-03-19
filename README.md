@@ -1,5 +1,9 @@
-# m-cli
+# cli
 a cli to initialize project
+
+- [x] React-ts
+- [ ] lib
+- [ ] Vue3
 
 # intro 
 ```sh
