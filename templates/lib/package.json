@@ -1,18 +1,62 @@
 {
-  "dependencies": {
-    "@types/node": "^18.7.18",
-    "typescript": "^4.8.3"
+  "name": "lib",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "devDependencies": {
-    "git-cz": "^4.9.0",
-    "rollup": "^2.79.0"
+  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "",
+    "url": ""
   },
+  "homepage": "",
+  "bugs": "",
   "scripts": {
-    "build": "rollup -c",
+    "prepublish": "npm run test && npm run build",
+    "build": "tsc",
+    "test": "c8 ava",
     "prepublishOnly": "npm run build",
     "commit": "git-cz",
     "release:major": "standard-version --release-as major",
     "release:minor": "standard-version --release-as minor",
     "release:patch": "standard-version --release-as patch"
-  }
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.5",
+    "ava": "^5.2.0",
+    "c8": "^7.13.0",
+    "git-cz": "^4.9.0",
+    "standard-version": "^9.5.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "c8": {
+    "reporter": [
+      "text",
+      "lcov"
+    ]
+  },
+  "ava": {
+    "extensions": {
+      "ts": "module"
+    },
+    "nodeArguments": [
+      "--loader=ts-node/esm",
+      "--experimental-specifier-resolution=node"
+    ],
+    "files": [
+      "test/**/*.ts"
+    ]
+  },
+  "author": "",
+  "license": "ISC"
 }
