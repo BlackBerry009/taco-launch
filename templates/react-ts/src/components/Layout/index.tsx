@@ -1,6 +1,5 @@
 import { Layout } from 'antd';
 import { Outlet, useNavigate } from 'react-router-dom';
-import './index.scss';
 import { useState } from 'react';
 import SideMenus from './SideMenu';
 import { ReactComponent as LogoImg } from '@/assets/logo.svg';
@@ -14,29 +13,26 @@ export const LayoutApp = () => {
     navigate(keyPath.join());
   };
   return (
-    <Layout className="layout-app">
+    <Layout>
       <Sider
         theme="light"
         collapsible
         collapsed={collapsed}
         onCollapse={(value) => setCollapsed(value)}
-        className='sider'
+        className='h-screen'
       >
-        <div className="logo-area">
-          <div className="logo">
+        <div className="flex justify-center items-center h-16">
+          <div className="w-16">
             <LogoImg />
           </div>
         </div>
         <SideMenus />
       </Sider>
       <Layout>
-        <Header className="bg" />
-        <Content className="my-4">
+        <Header className="bg-white" />
+        <Content className="m-4">
           <Outlet />
         </Content>
-        {/* <Footer className='text-center'>
-          A tools collection for girlfriend😊
-        </Footer> */}
       </Layout>
     </Layout>
   );

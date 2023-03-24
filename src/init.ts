@@ -24,6 +24,7 @@ export const main = async () => {
       framework: () =>
         p.select({
           message: `Which feature do you want to use?`,
+          initialValue: 'react-ts',
           options: [
             { value: 'react-ts', label: 'React' },
             { value: 'vue-ts', label: 'Vue' },

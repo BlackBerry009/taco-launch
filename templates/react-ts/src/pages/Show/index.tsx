@@ -1,6 +1,9 @@
+import { Card } from "antd";
 
 export const Show = () => {
   return (
-    <div>Show</div>
-  )
-}
+    <div>
+      <Card>Show</Card>
+    </div>
+  );
+};

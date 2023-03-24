@@ -13,7 +13,6 @@ const wrapRoutes = [
 export function getSideMenuRoutes(list: RouteNode[]): RouteNode[] {
   const nodes: RouteNode[] = [];
   list.forEach((l) => {
-    console.log(l, l.sideMenu);
     if (l.sideMenu) {
       const item = { ...l };
       if (l.children && l.children.length) {
@@ -31,4 +30,3 @@ export const App = () => {
 
 export const sideMenuRoutes = getSideMenuRoutes(routes);
 
-console.log('sideMenuRoutes', sideMenuRoutes);

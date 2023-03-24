@@ -1,3 +1,4 @@
+import { AppstoreOutlined } from "@ant-design/icons";
 import { LayoutApp } from "./components/Layout";
 import { Home } from "./pages/Home";
 import { Show } from "./pages/Show";
@@ -20,8 +21,9 @@ export const routes: RouteNode[] = [
   },
   {
     title: '展示',
-    path: 'show',
+    path: '/show',
     element: <Show />,
     sideMenu: true,
+    icon: <AppstoreOutlined />
   },
 ];
