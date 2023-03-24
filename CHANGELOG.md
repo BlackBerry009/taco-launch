@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/BlackBerry009/taco-launch/compare/v0.0.5...v0.0.6) (2023-03-24)
+
+
+### Features
+
+* 🎸 update template ([77b7bd9](https://github.com/BlackBerry009/taco-launch/commit/77b7bd904abc4de1e1ba035a18c6ef76245bc0d6))
+* update template ([6992233](https://github.com/BlackBerry009/taco-launch/commit/6992233a9b8de2b753e4bfd599a8f87ba52950b4))
+* update template ([286ad22](https://github.com/BlackBerry009/taco-launch/commit/286ad227c33e810e705e782a9ced06a9e1096a8e))
+
 ### [0.0.5](https://github.com/BlackBerry009/taco-launch/compare/v0.0.4...v0.0.5) (2023-03-19)
 
 
